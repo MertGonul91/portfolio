@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Box, Center, Flex } from '@chakra-ui/react';
+import { Image, Box, Center } from '@chakra-ui/react';
 
 const Hero = () => {
   return (
