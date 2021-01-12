@@ -1,34 +1,21 @@
 import React from 'react';
-import { Box, Center, Flex, Spacer, Link } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import { Container, Flex, Spacer } from '@chakra-ui/react';
 
 const Home = () => {
   return (
     <>
-      <Box w='auto' h='100vh'>
-        <Flex>
-          <Box p='20'>
-            <Link as={RouterLink} to='/'>
-              Home
-            </Link>
-          </Box>
+      <Container maxW='80vw'>
+        <Flex direction='column' h='100vh'>
+          <Header />
           <Spacer />
-          <Box p='20'>
-            <Link as={RouterLink} to='/projects'>
-              WebDev Projects
-            </Link>
-          </Box>
+          <Hero />
+          <Spacer />
+          <Footer />
         </Flex>
-        <Center>
-          <Box _hover={{ bg: 'black', color: 'white' }}>
-            <h1>I'm Mert Gönül, a developer and an architect.</h1>
-            <img src='' alt='' />
-          </Box>
-          <Box _hover={{ bg: 'black', color: 'white' }}>
-            <img src='' alt='' />
-          </Box>
-        </Center>
-      </Box>
+      </Container>
     </>
   );
 };
