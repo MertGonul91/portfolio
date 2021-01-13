@@ -1,24 +1,20 @@
 import React from 'react';
-import { Button, useColorMode, Text, useMediaQuery } from '@chakra-ui/react';
+import {
+  Button,
+  IconButton,
+  useColorMode,
+  Text,
+  useMediaQuery,
+} from '@chakra-ui/react';
+import { BsMoon, BsSun } from 'react-icons/bs';
 
 const DarkMode = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [mobile] = useMediaQuery('(max-width: 450px)');
   return (
     <>
-      {mobile ? (
-        <Button onClick={toggleColorMode}>
-          {colorMode === 'light' ? (
-            <Text fontSize='xs'>nighty</Text>
-          ) : (
-            <Text fontSize='xs'>sunny</Text>
-          )}
-        </Button>
-      ) : (
-        <Button onClick={toggleColorMode}>
-          {colorMode === 'light' ? <Text>nighty</Text> : <Text>sunny</Text>}
-        </Button>
-      )}
+      <IconButton onClick={toggleColorMode} size='md'>
+        {colorMode === 'light' ? <BsMoon /> : <BsSun />}
+      </IconButton>
     </>
   );
 };
