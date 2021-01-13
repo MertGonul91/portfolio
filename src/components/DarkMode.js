@@ -1,20 +1,25 @@
 import React from 'react';
-import { IconButton, useColorMode } from '@chakra-ui/react';
+import { Box, forwardRef, IconButton, useColorMode } from '@chakra-ui/react';
 import { BsMoon, BsSun } from 'react-icons/bs';
+import MotionBox from './MotionBox';
+
+import { motion, isValidMotionProp } from 'framer-motion';
 
 const DarkMode = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <IconButton
-        onClick={toggleColorMode}
-        size='md'
-        _hover={{
-          bgGradient: 'linear(to-r, red.500, yellow.500)',
-        }}
+      <MotionBox
+        boxSize='40px'
+        drag='x'
+        dragConstraints={{ left: -0, right: 0 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
-        {colorMode === 'light' ? <BsMoon /> : <BsSun />}
-      </IconButton>
+        <IconButton onClick={toggleColorMode} size='md'>
+          {colorMode === 'light' ? <BsMoon /> : <BsSun />}
+        </IconButton>
+      </MotionBox>
     </>
   );
 };
