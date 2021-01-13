@@ -8,13 +8,13 @@ const Footer = () => {
       <Flex>
         <Box p='10'>
           <Link as={RouterLink} to='/contact'>
-            Say Hi!
+            say hi.
           </Link>
         </Box>
         <Spacer />
         <Box p='10'>
           <Link as={RouterLink} to='/architecture'>
-            Architecture Projects
+            architecture projects.
           </Link>
         </Box>
       </Flex>
