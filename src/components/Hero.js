@@ -1,17 +1,5 @@
 import React from 'react';
-import {
-  Image,
-  Box,
-  Flex,
-  Text,
-  Center,
-  useMediaQuery,
-  Spacer,
-  Grid,
-  GridItem,
-  Icon,
-} from '@chakra-ui/react';
-import { AiFillGithub } from 'react-icons/ai';
+import { Box, Flex, Text, Center, useMediaQuery, Icon } from '@chakra-ui/react';
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import MotionBox from './MotionBox';
@@ -28,67 +16,72 @@ const Hero = () => {
         <Flex justifyContent='center'>
           <Center pos='relative' w='100px' boxSize='md'>
             <Box pos='absolute' left='-350px' w='300px'>
-              <Text fontSize='1rem'>{about}</Text>
+              <MotionBox
+                initial={{ scale: 0 }}
+                animate={{ scale: 1.2 }}
+                transition={{ type: 'spring', stiffness: 450 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Text fontSize='1rem'>{about}</Text>
+              </MotionBox>
               <Flex justifyContent='space-around' mt='50px' alignItems='center'>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={FaHtml5} w={12} h={12} />
-                  </MotionBox>
-                  <Text mt='10px'>html.</Text>
-                </Flex>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                    <Text mt='10px'>html.</Text>
+                  </Flex>
+                </MotionBox>
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={FaCss3Alt} w={12} h={12} />
-                  </MotionBox>
-                  <Text mt='10px'>css.</Text>
-                </Flex>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                    <Text mt='10px'>css.</Text>
+                  </Flex>
+                </MotionBox>
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={FaJs} w={12} h={12} />
-                  </MotionBox>
-                  <Text mt='10px'>javascript.</Text>
-                </Flex>
+                    <Text mt='10px'>javascript.</Text>
+                  </Flex>
+                </MotionBox>
               </Flex>
               <Flex justifyContent='space-around' mt='50px'>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={FaReact} w={12} h={12} />
-                  </MotionBox>
-
-                  <Text mt='10px'>react js.</Text>
-                </Flex>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                    <Text mt='10px'>react js.</Text>
+                  </Flex>
+                </MotionBox>
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={FaNodeJs} w={12} h={12} />
-                  </MotionBox>
-
-                  <Text mt='10px'>node js.</Text>
-                </Flex>
-                <Flex direction='column' alignItems='center'>
-                  <MotionBox
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
+                    <Text mt='10px'>node js.</Text>
+                  </Flex>
+                </MotionBox>
+                <MotionBox
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Flex direction='column' alignItems='center'>
                     <Icon as={DiMongodb} w={12} h={12} />
-                  </MotionBox>
-
-                  <Text mt='10px'>mongo db.</Text>
-                </Flex>
+                    <Text mt='10px'>mongo db.</Text>
+                  </Flex>
+                </MotionBox>
               </Flex>
             </Box>
           </Center>
