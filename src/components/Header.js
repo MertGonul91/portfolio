@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkMode from './DarkMode';
-import { Box, Flex, Link, Text } from '@chakra-ui/react';
+import { Flex, Link, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
