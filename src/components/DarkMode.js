@@ -9,8 +9,6 @@ const DarkMode = () => {
     <>
       <MotionBox
         boxSize='40px'
-        drag='x'
-        dragConstraints={{ left: 0, right: 0 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

@@ -1,5 +1,13 @@
 import React from 'react';
-import { Box, Flex, Text, Center, useMediaQuery, Icon } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Text,
+  Center,
+  useMediaQuery,
+  Icon,
+  Divider,
+} from '@chakra-ui/react';
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import MotionBox from './MotionBox';
@@ -25,6 +33,7 @@ const Hero = () => {
               >
                 <Text fontSize='1rem'>{about}</Text>
               </MotionBox>
+              <Divider pt='40px' />
               <Flex justifyContent='space-around' mt='50px' alignItems='center'>
                 <MotionBox
                   whileHover={{ scale: 1.1 }}
