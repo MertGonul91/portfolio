@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Spacer, Link } from '@chakra-ui/react';
+import { Box, Flex, Spacer, Link, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -8,13 +8,13 @@ const Footer = () => {
       <Flex>
         <Box p='10'>
           <Link as={RouterLink} to='/contact'>
-            say hi.
+            <Text fontSize='1.1rem'> say hi.</Text>
           </Link>
         </Box>
         <Spacer />
         <Box p='10'>
           <Link as={RouterLink} to='/architecture'>
-            architecture projects.
+            <Text fontSize='1.1rem'>architecture projects.</Text>
           </Link>
         </Box>
       </Flex>

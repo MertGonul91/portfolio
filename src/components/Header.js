@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkMode from './DarkMode';
-import { Box, Flex, Link } from '@chakra-ui/react';
+import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
       <Flex justifyContent='space-between'>
         <Box p='10'>
           <Link as={RouterLink} to='/'>
-            home.
+            <Text fontSize='1.1rem'>home.</Text>
           </Link>
         </Box>
 
@@ -19,7 +19,7 @@ const Header = () => {
 
         <Box p='10'>
           <Link as={RouterLink} to='/projects'>
-            webdev projects.
+            <Text fontSize='1.1rem'>webdev projects.</Text>
           </Link>
         </Box>
       </Flex>
