@@ -4,15 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Box, Container, Flex, Spacer, Text } from '@chakra-ui/react';
 
-const Architecture = () => {
+const Contact = () => {
   return (
     <>
       <Container maxW='100vw' minW='auto'>
         <Flex direction='column' h='100vh'>
           <Header />
           <Spacer />
-          <Box>
-            <Text fontSize='4xl'>Architecture </Text>
+          <Box m='auto'>
+            <Text fontSize='4xl'>Contact </Text>
           </Box>
           <Spacer />
           <Footer />
@@ -22,4 +22,4 @@ const Architecture = () => {
   );
 };
 
-export default Architecture;
+export default Contact;
