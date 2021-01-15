@@ -6,7 +6,7 @@ const Footer = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');
   return (
     <>
-      <Flex p='0 40px 20px 40px' justifyContent='center'>
+      <Flex p='40px' justifyContent='center'>
         <Flex justifyContent='flex-start' flex='1'>
           <Link as={RouterLink} to='/contact'>
             <Text fontSize={mobile ? '0.8rem' : '1.1rem'}> say hi.</Text>
