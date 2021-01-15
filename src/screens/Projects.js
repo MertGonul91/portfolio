@@ -10,7 +10,7 @@ const Projects = () => {
         <Flex direction='column' h='100vh'>
           <Header />
           <Spacer />
-          <Box>
+          <Box m='auto'>
             <Text fontSize='4xl'>Project </Text>
             <Text fontSize='4xl'>Project </Text>
             <Text fontSize='4xl'>Project </Text>

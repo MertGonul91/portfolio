@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from './theme';
+import 'focus-visible/dist/focus-visible';
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>

@@ -11,7 +11,7 @@ const Architecture = () => {
         <Flex direction='column' h='100vh'>
           <Header />
           <Spacer />
-          <Box>
+          <Box m='auto'>
             <Text fontSize='4xl'>Architecture </Text>
           </Box>
           <Spacer />
