@@ -7,6 +7,7 @@ import MotionBox from './MotionBox';
 const Skills = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');
   const fs = mobile ? '0.75rem' : '0.9rem';
+  const is = mobile ? 8 : 12;
   return (
     <>
       <Flex direction='column' justifyContent='center'>
@@ -21,8 +22,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={FaHtml5} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={FaHtml5} w={is} h={is} />
+              <Text mt='10px' align='center' fontSize={fs}>
                 html.
               </Text>
             </Flex>
@@ -33,8 +34,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={FaCss3Alt} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={FaCss3Alt} w={is} h={is} />
+              <Text mt='10px' align='center' fontSize={fs}>
                 css.
               </Text>
             </Flex>
@@ -45,8 +46,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={FaJs} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={FaJs} w={is} h={is} />
+              <Text mt='10px' align='center' fontSize={fs}>
                 javascript.
               </Text>
             </Flex>
@@ -59,8 +60,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={FaReact} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={FaReact} w={is} h={is} />
+              <Text mt='10px' align='center' fontSize={fs}>
                 react js.
               </Text>
             </Flex>
@@ -71,8 +72,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={FaNodeJs} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={FaNodeJs} w={is} h={is} />
+              <Text mt='10px' align='center' fontSize={fs}>
                 node js.
               </Text>
             </Flex>
@@ -83,8 +84,8 @@ const Skills = () => {
               alignItems='center'
               m={mobile ? '10px' : '0'}
             >
-              <Icon as={DiMongodb} w={mobile ? 5 : 12} h={mobile ? 5 : 12} />
-              <Text mt='10px' text-align='center' fontSize={fs}>
+              <Icon as={DiMongodb} w={is} h={is} />
+              <Text display='flex' mt='10px' align='center' fontSize={fs}>
                 mongo db.
               </Text>
             </Flex>
