@@ -1,4 +1,3 @@
-import './App.css';
 import Home from './screens/Home';
 import Projects from './screens/Projects';
 import Architecture from './screens/Architecture';
