@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import { Container, Flex, Spacer } from '@chakra-ui/react';
+import MotionBox from '../components/MotionBox';
 
 const Home = () => {
   return (
@@ -11,7 +12,12 @@ const Home = () => {
         <Flex direction='column' h='100vh'>
           <Header />
           <Spacer />
-          <Hero />
+          <MotionBox
+            exit={{ x: -2000 }}
+            transition={{ duration: 1.1, ease: [0.87, 0, 0.13, 1] }}
+          >
+            <Hero />
+          </MotionBox>
           <Spacer />
           <Footer />
         </Flex>

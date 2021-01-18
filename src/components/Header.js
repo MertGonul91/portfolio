@@ -1,9 +1,10 @@
 import React from 'react';
 import DarkMode from './DarkMode';
 import { Flex, Link, Text, useMediaQuery } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const { pathname } = useLocation();
   const [mobile] = useMediaQuery('(max-width: 450px)');
   return (
     <>
@@ -31,7 +32,7 @@ const Header = () => {
         <Flex ml='auto' flex='1' justifyContent='flex-end'>
           <Link as={RouterLink} to='/projects'>
             <Text fontSize={mobile ? '0.8rem' : '1.1rem'} align='end'>
-              webdev projects.
+              {pathname === '/projects' ? null : 'webdev projects.'}
             </Text>
           </Link>
         </Flex>

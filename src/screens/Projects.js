@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Link, Box, Container, Flex, Spacer, Text } from '@chakra-ui/react';
+import {
+  Link,
+  Box,
+  Container,
+  Flex,
+  Spacer,
+  Text,
+  Divider,
+} from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { projects } from '../db/projects';
+import MotionBox from '../components/MotionBox';
 
 const Projects = () => {
   const [projectId, setProjectId] = useState(0);
@@ -17,43 +26,53 @@ const Projects = () => {
         <Flex direction='column' h='100vh'>
           <Header />
           <Spacer />
-          <Flex justifyContent='space-between' direction='row' m='10px'>
-            {projectId > 0 ? (
-              <Flex justifyContent='center' alignItems='center' w='30vw'>
-                {name}
-              </Flex>
-            ) : (
-              <Flex justifyContent='center' alignItems='center' w='30vw'>
-                This is my works
-              </Flex>
-            )}
-            <Box w='50vw'>
-              {projects.webdev.map((project) => (
-                <Link as={RouterLink} to={`/${project.name}`}>
-                  <Flex
-                    w='40vw'
-                    h='15vh'
+          <MotionBox
+            exit={{ x: -2000 }}
+            transition={{ duration: 1.1, ease: [0.87, 0, 0.13, 1] }}
+          >
+            <Flex justifyContent='space-between' direction='row' m='10px'>
+              {projectId > 0 ? (
+                <Flex justifyContent='center' alignItems='center' w='30vw'>
+                  {name}
+                </Flex>
+              ) : (
+                <Flex justifyContent='center' alignItems='center' w='30vw'>
+                  This is my works
+                </Flex>
+              )}
+              <Box w='50vw'>
+                {projects.webdev.map((project) => (
+                  <Link
                     key={project.key}
-                    onMouseEnter={() => setProjectId(project.id)}
-                    onMouseLeave={() => setProjectId(0)}
-                    _hover={{
-                      background: 'black',
-                      color: 'mediumturquoise',
-                    }}
-                    p='20px'
-                    m='20px'
-                    border='1px'
-                    borderColor='ButtonHighlight'
-                    alignItems='center'
+                    as={RouterLink}
+                    to={`/${project.name}`}
                   >
-                    <Text>{`0${project.id}.`}</Text>
-                    <Spacer />
-                    <Text fontSize='2xl'>{project.name}</Text>
-                  </Flex>
-                </Link>
-              ))}
-            </Box>
-          </Flex>
+                    <Flex
+                      w='40vw'
+                      h='12vh'
+                      onMouseEnter={() => setProjectId(project.id)}
+                      onMouseLeave={() => setProjectId(0)}
+                      _hover={{
+                        background: 'green',
+                        color: 'light',
+                      }}
+                      p='20px'
+                      m='20px'
+                      borderBottom='1px'
+                      borderColor='ButtonHighlight'
+                      alignItems='center'
+                    >
+                      <Text fontSize='1xl'>{`0${project.id}.`}</Text>
+                      <Divider orientation='vertical' h='40px' ml='20px' />
+                      <Spacer />
+                      <Text fontSize='3xl'>{project.name}</Text>
+                      <Spacer />
+                    </Flex>
+                  </Link>
+                ))}
+              </Box>
+            </Flex>
+          </MotionBox>
           <Spacer />
           <Footer />
         </Flex>

@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from './theme';
 import 'focus-visible/dist/focus-visible';
-
 ReactDOM.render(
   <ChakraProvider theme={theme}>
     <React.StrictMode>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <App />
+      <Router>
+        <App />
+      </Router>
     </React.StrictMode>
   </ChakraProvider>,
   document.getElementById('root')
