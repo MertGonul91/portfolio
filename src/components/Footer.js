@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Flex, Spacer, Link, Text, useMediaQuery } from '@chakra-ui/react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import MotionBox from './MotionBox';
-import { AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
   const { pathname } = useLocation();
   const [mobile] = useMediaQuery('(max-width: 450px)');
+  const [out, setOut] = useState(false);
+  console.log(pathname);
   return (
     <>
       <Flex p='40px' justifyContent='center'>
@@ -23,10 +24,14 @@ const Footer = () => {
 
         <Spacer />
         <Flex justifyContent='flex-end' flex='1' ml='auto'>
-          <Link as={RouterLink} to='/architecture'>
-            <Text fontSize={mobile ? '0.8rem' : '1.1rem'}>
-              {pathname === '/architecture' ? null : 'architecture projects.'}
-            </Text>
+          <Link as={RouterLink} onClick={() => setOut(true)} to='/architecture'>
+            <MotionBox exit={out && { opacity: 0 }}>
+              {pathname === '/architecture' ? null : (
+                <Text fontSize={mobile ? '0.8rem' : '1.1rem'}>
+                  architecture projects.
+                </Text>
+              )}
+            </MotionBox>
           </Link>
         </Flex>
       </Flex>
