@@ -33,13 +33,13 @@ const Header = () => {
 
         <Flex ml='auto' flex='1' justifyContent='flex-end'>
           <Link as={RouterLink} onClick={() => setOut(true)} to='/projects'>
-            <MotionBox exit={out && { opacity: 0 }}>
-              {pathname === '/projects' ? null : (
+            {pathname === '/projects' || (
+              <MotionBox exit={out && { opacity: 0 }}>
                 <Text fontSize={mobile ? '0.8rem' : '1.1rem'}>
                   webdev projects.
                 </Text>
-              )}
-            </MotionBox>
+              </MotionBox>
+            )}
           </Link>
         </Flex>
       </Flex>
