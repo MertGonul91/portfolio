@@ -8,14 +8,14 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from './theme';
 import 'focus-visible/dist/focus-visible';
 ReactDOM.render(
-  <ChakraProvider theme={theme}>
-    <React.StrictMode>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Router>
+  <Router>
+    <ChakraProvider theme={theme}>
+      <React.StrictMode>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <App />
-      </Router>
-    </React.StrictMode>
-  </ChakraProvider>,
+      </React.StrictMode>
+    </ChakraProvider>
+  </Router>,
   document.getElementById('root')
 );
 

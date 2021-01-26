@@ -30,7 +30,7 @@ export const projects = {
       id: 1,
       key: 1,
       name: 'claycelium.',
-      img: '/img/architecture/1.jpg',
+      img: '/img/architecture/1.png',
     },
     {
       id: 2,

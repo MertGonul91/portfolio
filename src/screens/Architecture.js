@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import {
   Link,
   Box,
-  Container,
   Flex,
   Spacer,
   Text,
@@ -29,26 +26,42 @@ const Projects = () => {
         exit={{ x: -2000 }}
         transition={{ duration: 1.1, ease: [0.87, 0, 0.13, 1] }}
       >
-        <Flex
-          justifyContent='center'
-          alignItems='center'
-          direction='row'
-          m='10px'
-        >
+        <Flex justifyContent='center' alignItems='center' direction='row'>
           {projectId > 0 ? (
-            <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <MotionBox
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              exit={{ y: -100, opacity: 0 }}
+            >
               <Flex
                 direction='column'
                 justifyContent='center'
                 alignItems='center'
-                w='30vw'
+                w='40vw'
+                position='relative'
               >
-                <Image src={projects.architecture[projectId - 1].img}></Image>
-                <Text>{name}</Text>
+                <Image
+                  m='20px'
+                  src={projects.architecture[projectId - 1].img}
+                />
+                <MotionBox
+                  initial={{ y: -200, opacity: 0 }}
+                  animate={{ y: 0, opacity: 0.8 }}
+                  exit={{ opacity: 0 }}
+                  overflow='hidden'
+                  position='absolute'
+                  top='20px'
+                  left='20px'
+                >
+                  <Text color='white' fontStyle='oblique' fontSize='2rem'>
+                    {name}
+                  </Text>
+                </MotionBox>
               </Flex>
             </MotionBox>
           ) : (
-            <Flex justifyContent='center' alignItems='center' w='30vw'>
+            <Flex justifyContent='center' alignItems='center' w='40vw'>
               This is my works
             </Flex>
           )}
@@ -65,6 +78,7 @@ const Projects = () => {
                   borderBottom='1px'
                   borderColor='ButtonHighlight'
                   alignItems='center'
+                  _hover={{ bg: 'gray.500' }}
                 >
                   <Text fontSize='1xl'>{`0${project.id}.`}</Text>
                   <Divider orientation='vertical' h='40px' ml='20px' />
