@@ -32,7 +32,7 @@ const Projects = () => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
-              exit={{ y: -100, opacity: 0 }}
+              exit={{ y: 100, opacity: 0 }}
             >
               <Flex
                 direction='column'
@@ -48,6 +48,7 @@ const Projects = () => {
                 <MotionBox
                   initial={{ y: -200, opacity: 0 }}
                   animate={{ y: 0, opacity: 0.8 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
                   exit={{ opacity: 0 }}
                   overflow='hidden'
                   position='absolute'

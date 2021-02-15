@@ -1,3 +1,4 @@
+import { Flex, Image } from '@chakra-ui/react';
 import React from 'react';
 import Hero from '../components/Hero';
 import MotionBox from '../components/MotionBox';
