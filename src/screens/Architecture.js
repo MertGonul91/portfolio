@@ -63,12 +63,12 @@ const Projects = () => {
             </MotionBox>
           ) : (
             <Flex justifyContent='center' alignItems='center' w='40vw'>
-              This is my works
+              These are my projects.
             </Flex>
           )}
           <Box w='50vw'>
             {projects.architecture.map((project) => (
-              <Link key={project.key} as={RouterLink} to={`/${project.name}`}>
+              <Link key={project.key} href={project.link} isExternal>
                 <Flex
                   w='40vw'
                   h='12vh'
@@ -76,10 +76,7 @@ const Projects = () => {
                   onMouseLeave={() => setProjectId(0)}
                   p='20px'
                   m='20px'
-                  borderBottom='1px'
-                  borderColor='ButtonHighlight'
                   alignItems='center'
-                  _hover={{ bg: 'gray.500' }}
                 >
                   <Text fontSize='1xl'>{`0${project.id}.`}</Text>
                   <Divider orientation='vertical' h='40px' ml='20px' />
@@ -87,6 +84,7 @@ const Projects = () => {
                   <Text fontSize='3xl'>{project.name}</Text>
                   <Spacer />
                 </Flex>
+                <Divider w='40vw' />
               </Link>
             ))}
           </Box>

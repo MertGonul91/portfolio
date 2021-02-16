@@ -3,26 +3,36 @@ export const projects = {
     {
       id: 1,
       key: 1,
-      name: 'shopify.',
+      name: 'mert_dizayn.',
       img: '/img/architecture/1.jpg',
+      link: 'https://mertdizayn.com.tr',
+      description: {
+        header: 'Construction Company Website',
+        tech: 'HTML, CSS, JavaScript',
+      },
     },
     {
       id: 2,
       key: 2,
-      name: 'downer_counter.',
+      name: 'shoppie.',
       img: '/img/architecture/1.jpg',
+      link: 'https://shoppieappie.herokuapp.com',
+      description: {
+        header: 'E-commerce Website',
+        tech:
+          'React JS, Node JS, Express, Mongo DB, Redux, React Router, Axios, Bootstrap',
+      },
     },
     {
       id: 3,
       key: 3,
-      name: 'site_management.',
+      name: 'portfolio.',
       img: '/img/architecture/1.jpg',
-    },
-    {
-      id: 4,
-      key: 4,
-      name: 'basic_project.',
-      img: '/img/architecture/1.jpg',
+      link: 'https://dev-mert.surge.sh',
+      description: {
+        header: 'Personal Website',
+        tech: 'React JS, React Router, Chakra UI, Framer Motion',
+      },
     },
   ],
   architecture: [
@@ -31,18 +41,21 @@ export const projects = {
       key: 1,
       name: 'claycelium.',
       img: '/img/architecture/1.png',
+      link: 'http://www.iaacblog.com/programs/claycelium/',
     },
     {
       id: 2,
       key: 2,
       name: 'circumeo.',
       img: '/img/architecture/2.jpg',
+      link: 'http://www.iaacblog.com/programs/circumeo-to-wander-through/',
     },
     {
       id: 3,
       key: 3,
       name: 'tower of freedom.',
       img: '/img/architecture/3.jpg',
+      link: 'https://www.arkitera.com/proje/tower-of-freedom/',
     },
     {
       id: 4,
