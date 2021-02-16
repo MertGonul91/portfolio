@@ -24,7 +24,7 @@ const Skills = () => {
             >
               <Icon as={FaHtml5} w={is} h={is} />
               <Text mt='10px' align='center' fontSize={fs}>
-                html.
+                html
               </Text>
             </Flex>
           </MotionBox>
@@ -36,7 +36,7 @@ const Skills = () => {
             >
               <Icon as={FaCss3Alt} w={is} h={is} />
               <Text mt='10px' align='center' fontSize={fs}>
-                css.
+                css
               </Text>
             </Flex>
           </MotionBox>
@@ -48,7 +48,7 @@ const Skills = () => {
             >
               <Icon as={FaJs} w={is} h={is} />
               <Text mt='10px' align='center' fontSize={fs}>
-                javascript.
+                javascript
               </Text>
             </Flex>
           </MotionBox>
@@ -62,7 +62,7 @@ const Skills = () => {
             >
               <Icon as={FaReact} w={is} h={is} />
               <Text mt='10px' align='center' fontSize={fs}>
-                react js.
+                react js
               </Text>
             </Flex>
           </MotionBox>
@@ -74,7 +74,7 @@ const Skills = () => {
             >
               <Icon as={FaNodeJs} w={is} h={is} />
               <Text mt='10px' align='center' fontSize={fs}>
-                node js.
+                node js
               </Text>
             </Flex>
           </MotionBox>
@@ -86,7 +86,7 @@ const Skills = () => {
             >
               <Icon as={DiMongodb} w={is} h={is} />
               <Text display='flex' mt='10px' align='center' fontSize={fs}>
-                mongo db.
+                mongo db
               </Text>
             </Flex>
           </MotionBox>

@@ -35,7 +35,11 @@ const Hero = () => {
               minWidth='10vh'
             />
             <Flex direction='column' justifyContent='center'>
-              <Link href='https://github.com/MertGonul91' m='20px auto'>
+              <Link
+                href='https://github.com/MertGonul91'
+                m='20px auto'
+                isExternal
+              >
                 <Icon as={AiFillGithub} w={is} h={is} />
                 <Text mt='10px' align='center' fontSize={fs}>
                   github.
@@ -44,6 +48,7 @@ const Hero = () => {
               <Link
                 href='https://www.linkedin.com/in/mertgonul91/'
                 m='20px auto'
+                isExternal
               >
                 <Icon as={AiFillLinkedin} w={is} h={is} />
                 <Text mt='10px' align='center' fontSize={fs}>
