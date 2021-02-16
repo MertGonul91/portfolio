@@ -4,7 +4,7 @@ export const projects = {
       id: 1,
       key: 1,
       name: 'mert_dizayn.',
-      link: 'https://mertdizayn.com.tr',
+      link: 'http://mertdizayn.com.tr',
       description: {
         header: 'Construction Company Website',
         tech: 'HTML, CSS, JavaScript',
