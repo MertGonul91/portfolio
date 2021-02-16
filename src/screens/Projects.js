@@ -19,8 +19,6 @@ const Projects = () => {
 
   let selected = projectId > 0 && projects.webdev[projectId - 1];
 
-  console.log(projectId > 0 && projects.webdev[projectId - 1].img);
-
   const clickHandler = (e) => {
     setSurprise(true);
     setTimeout(() => {

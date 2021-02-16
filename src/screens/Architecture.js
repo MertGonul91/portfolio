@@ -19,8 +19,6 @@ const Projects = () => {
 
   let name = projectId > 0 && projects.architecture[projectId - 1].name;
 
-  console.log(projectId > 0 && projects.architecture[projectId - 1].img);
-
   return (
     <>
       <MotionBox
