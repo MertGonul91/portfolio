@@ -80,7 +80,10 @@ const Projects = () => {
               <Text fontSize={mobile ? '0.75rem' : '1rem'}>
                 These are some of my projects.
               </Text>
-              <Link href='/cva.pdf' isExternal>
+              <Link
+                href='https://drive.google.com/file/d/11pJlX3Dka1FvYqEweYEVxvj2QYRV_Kst/view?usp=sharing'
+                isExternal
+              >
                 <Text fontSize={mobile ? '0.75rem' : '1rem'}>
                   Click here to see more of my architectural history.
                 </Text>

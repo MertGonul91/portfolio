@@ -97,7 +97,7 @@ const Hero = () => {
                 justifyContent='center'
               >
                 <Link
-                  href='/cv.pdf'
+                  href='https://drive.google.com/file/d/1vjwIkXLmNjVvrV6NfxY2HUKi8fMAa6sK/view?usp=sharing'
                   m='20px auto'
                   isExternal
                   textAlign='center'
