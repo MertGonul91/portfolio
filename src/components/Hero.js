@@ -8,8 +8,9 @@ import {
   useMediaQuery,
   Text,
 } from '@chakra-ui/react';
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillGithub, AiFillFilePdf } from 'react-icons/ai';
 import About from './About';
+import MotionBox from './MotionBox';
 
 const Hero = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');
@@ -35,26 +36,60 @@ const Hero = () => {
               minWidth='10vh'
             />
             <Flex direction='column' justifyContent='center'>
-              <Link
-                href='https://github.com/MertGonul91'
-                m='20px auto'
-                isExternal
+              <MotionBox
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                display='flex'
+                justifyContent='center'
               >
-                <Icon as={AiFillGithub} w={is} h={is} />
-                <Text mt='10px' align='center' fontSize={fs}>
-                  github.
-                </Text>
-              </Link>
-              <Link
-                href='https://www.linkedin.com/in/mertgonul91/'
-                m='20px auto'
-                isExternal
+                <Link
+                  href='https://github.com/MertGonul91'
+                  m='20px auto'
+                  isExternal
+                  textAlign='center'
+                >
+                  <Icon as={AiFillGithub} w={is} h={is} />
+                  <Text mt='10px' align='center' fontSize={fs}>
+                    github.
+                  </Text>
+                </Link>
+              </MotionBox>
+              <MotionBox
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                display='flex'
+                justifyContent='center'
               >
-                <Icon as={AiFillLinkedin} w={is} h={is} />
-                <Text mt='10px' align='center' fontSize={fs}>
-                  linkedin.
-                </Text>
-              </Link>
+                <Link
+                  href='https://www.linkedin.com/in/mertgonul91/'
+                  m='20px auto'
+                  isExternal
+                  textAlign='center'
+                >
+                  <Icon as={AiFillLinkedin} w={is} h={is} />
+                  <Text mt='10px' align='center' fontSize={fs}>
+                    linkedin.
+                  </Text>
+                </Link>
+              </MotionBox>
+              <MotionBox
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                display='flex'
+                justifyContent='center'
+              >
+                <Link
+                  href='/cv.pdf'
+                  m='20px auto'
+                  isExternal
+                  textAlign='center'
+                >
+                  <Icon as={AiFillFilePdf} w={is} h={is} />
+                  <Text mt='10px' align='center' fontSize={fs}>
+                    checkout my cv.
+                  </Text>
+                </Link>
+              </MotionBox>
             </Flex>
           </Flex>
         </Flex>

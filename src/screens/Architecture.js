@@ -62,8 +62,16 @@ const Projects = () => {
               </Flex>
             </MotionBox>
           ) : (
-            <Flex justifyContent='center' alignItems='center' w='40vw'>
-              These are my projects.
+            <Flex
+              justifyContent='center'
+              alignItems='center'
+              w='40vw'
+              direction='column'
+            >
+              <Text>These are some of my projects.</Text>
+              <Link href='/cva.pdf' isExternal>
+                Click here to see more of my architectural history.
+              </Link>
             </Flex>
           )}
           <Box w='50vw'>
