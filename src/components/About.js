@@ -6,7 +6,8 @@ import Skills from './Skills';
 const About = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');
 
-  const about = "I'm Mert Gönül, a Full Stack Developer and an Architect.";
+  const about =
+    "I'm Mert Gönül, an avid self taught Full Stack Developer with Architecture background.";
   return (
     <>
       <Box>

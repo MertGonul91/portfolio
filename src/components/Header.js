@@ -10,7 +10,7 @@ const Header = () => {
   const [out, setOut] = useState(false);
   return (
     <>
-      <Flex justifyContent='center' p='40px' alignItems='center'>
+      <Flex justifyContent='center' p='20px' alignItems='center'>
         <Flex
           mr='auto'
           flex='1'
@@ -35,7 +35,7 @@ const Header = () => {
           <Link as={RouterLink} onClick={() => setOut(true)} to='/projects'>
             {pathname === '/projects' || (
               <MotionBox exit={out && { opacity: 0 }}>
-                <Text fontSize={mobile ? '0.8rem' : '1.1rem'}>
+                <Text fontSize={mobile ? '0.8rem' : '1.1rem'} textAlign='end'>
                   webdev projects.
                 </Text>
               </MotionBox>

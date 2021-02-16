@@ -7,6 +7,7 @@ import {
   Text,
   Divider,
   Image,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ import { projects } from '../db/projects';
 import MotionBox from '../components/MotionBox';
 
 const Projects = () => {
+  const [mobile] = useMediaQuery('(max-width: 450px)');
   const [projectId, setProjectId] = useState(0);
 
   let name = projectId > 0 && projects.architecture[projectId - 1].name;
@@ -26,7 +28,11 @@ const Projects = () => {
         exit={{ x: -2000 }}
         transition={{ duration: 1.1, ease: [0.87, 0, 0.13, 1] }}
       >
-        <Flex justifyContent='center' alignItems='center' direction='row'>
+        <Flex
+          justifyContent='center'
+          alignItems='center'
+          direction={mobile ? 'column' : 'row'}
+        >
           {projectId > 0 ? (
             <MotionBox
               initial={{ y: -100, opacity: 0 }}
@@ -41,10 +47,12 @@ const Projects = () => {
                 w='40vw'
                 position='relative'
               >
-                <Image
-                  m='20px'
-                  src={projects.architecture[projectId - 1].img}
-                />
+                {mobile || (
+                  <Image
+                    m='20px'
+                    src={projects.architecture[projectId - 1].img}
+                  />
+                )}
                 <MotionBox
                   initial={{ y: -200, opacity: 0 }}
                   animate={{ y: 0, opacity: 0.8 }}
@@ -55,9 +63,11 @@ const Projects = () => {
                   top='20px'
                   left='20px'
                 >
-                  <Text color='white' fontStyle='oblique' fontSize='2rem'>
-                    {name}
-                  </Text>
+                  {mobile || (
+                    <Text color='white' fontStyle='oblique' fontSize='2rem'>
+                      {name}
+                    </Text>
+                  )}
                 </MotionBox>
               </Flex>
             </MotionBox>
@@ -65,31 +75,44 @@ const Projects = () => {
             <Flex
               justifyContent='center'
               alignItems='center'
-              w='40vw'
+              w={mobile ? '90vw' : '40vw'}
               direction='column'
             >
-              <Text>These are some of my projects.</Text>
+              <Text fontSize={mobile ? '0.75rem' : '1rem'}>
+                These are some of my projects.
+              </Text>
               <Link href='/cva.pdf' isExternal>
-                Click here to see more of my architectural history.
+                <Text fontSize={mobile ? '0.75rem' : '1rem'}>
+                  Click here to see more of my architectural history.
+                </Text>
               </Link>
             </Flex>
           )}
-          <Box w='50vw'>
+
+          <Box w={mobile ? '90vw' : '50vw'}>
             {projects.architecture.map((project) => (
               <Link key={project.key} href={project.link} isExternal>
                 <Flex
-                  w='40vw'
-                  h='12vh'
+                  w={mobile ? '90vw' : '40vw'}
+                  h={mobile ? '6vh' : '12vh'}
                   onMouseEnter={() => setProjectId(project.id)}
                   onMouseLeave={() => setProjectId(0)}
                   p='20px'
                   m='20px'
                   alignItems='center'
                 >
-                  <Text fontSize='1xl'>{`0${project.id}.`}</Text>
-                  <Divider orientation='vertical' h='40px' ml='20px' />
+                  <Text
+                    fontSize={mobile ? '0.7rem' : '1xl'}
+                  >{`0${project.id}.`}</Text>
+                  <Divider
+                    orientation='vertical'
+                    h={mobile ? '6vh' : '40px'}
+                    ml='20px'
+                  />
                   <Spacer />
-                  <Text fontSize='3xl'>{project.name}</Text>
+                  <Text fontSize={mobile ? '0.7rem' : '3xl'}>
+                    {project.name}
+                  </Text>
                   <Spacer />
                 </Flex>
                 <Divider w='40vw' />
