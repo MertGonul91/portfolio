@@ -9,7 +9,6 @@ import {
   Image,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
 
 import { projects } from '../db/projects';
 import MotionBox from '../components/MotionBox';
@@ -110,9 +109,7 @@ const Projects = () => {
                     ml='20px'
                   />
                   <Spacer />
-                  <Text fontSize={mobile ? '0.7rem' : '3xl'}>
-                    {project.name}
-                  </Text>
+                  <Text fontSize={mobile ? '1rem' : '3xl'}>{project.name}</Text>
                   <Spacer />
                 </Flex>
                 <Divider w='40vw' />

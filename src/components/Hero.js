@@ -11,7 +11,6 @@ import {
 import { AiFillLinkedin, AiFillGithub, AiFillFilePdf } from 'react-icons/ai';
 import About from './About';
 import MotionBox from './MotionBox';
-import Skills from './Skills';
 
 const Hero = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');

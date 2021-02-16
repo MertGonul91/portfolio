@@ -4,7 +4,6 @@ export const projects = {
       id: 1,
       key: 1,
       name: 'mert_dizayn.',
-      img: '/img/architecture/1.jpg',
       link: 'https://mertdizayn.com.tr',
       description: {
         header: 'Construction Company Website',
@@ -15,7 +14,6 @@ export const projects = {
       id: 2,
       key: 2,
       name: 'shoppie.',
-      img: '/img/architecture/1.jpg',
       link: 'https://shoppieappie.herokuapp.com',
       description: {
         header: 'E-commerce Website',
@@ -27,7 +25,6 @@ export const projects = {
       id: 3,
       key: 3,
       name: 'portfolio.',
-      img: '/img/architecture/1.jpg',
       link: 'https://dev-mert.surge.sh',
       description: {
         header: 'Personal Website',
