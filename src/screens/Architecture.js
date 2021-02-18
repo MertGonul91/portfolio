@@ -8,14 +8,18 @@ import {
   Divider,
   Image,
   useMediaQuery,
+  Icon,
 } from '@chakra-ui/react';
 
 import { projects } from '../db/projects';
 import MotionBox from '../components/MotionBox';
+import { AiFillFilePdf } from 'react-icons/ai';
 
 const Projects = () => {
   const [mobile] = useMediaQuery('(max-width: 450px)');
   const [projectId, setProjectId] = useState(0);
+
+  const is = mobile ? 8 : 12;
 
   let name = projectId > 0 && projects.architecture[projectId - 1].name;
 
@@ -28,9 +32,9 @@ const Projects = () => {
         <Flex
           justifyContent='center'
           alignItems='center'
-          direction={mobile ? 'column' : 'row'}
+          direction={mobile ? 'column-reverse' : 'row-reverse'}
         >
-          {projectId > 0 ? (
+          {projectId > 0 && !mobile ? (
             <MotionBox
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -44,12 +48,11 @@ const Projects = () => {
                 w='40vw'
                 position='relative'
               >
-                {mobile || (
-                  <Image
-                    m='20px'
-                    src={projects.architecture[projectId - 1].img}
-                  />
-                )}
+                <Image
+                  m='20px'
+                  src={projects.architecture[projectId - 1].img}
+                />
+
                 <MotionBox
                   initial={{ y: -200, opacity: 0 }}
                   animate={{ y: 0, opacity: 0.8 }}
@@ -60,11 +63,9 @@ const Projects = () => {
                   top='20px'
                   left='20px'
                 >
-                  {mobile || (
-                    <Text color='white' fontStyle='oblique' fontSize='2rem'>
-                      {name}
-                    </Text>
-                  )}
+                  <Text color='white' fontStyle='oblique' fontSize='2rem'>
+                    {name}
+                  </Text>
                 </MotionBox>
               </Flex>
             </MotionBox>
@@ -75,17 +76,25 @@ const Projects = () => {
               w={mobile ? '90vw' : '40vw'}
               direction='column'
             >
-              <Text fontSize={mobile ? '0.75rem' : '1rem'}>
-                These are some of my projects.
-              </Text>
-              <Link
-                href='https://drive.google.com/file/d/11pJlX3Dka1FvYqEweYEVxvj2QYRV_Kst/view?usp=sharing'
-                isExternal
+              <MotionBox
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                display='flex'
+                justifyContent='center'
               >
-                <Text fontSize={mobile ? '0.75rem' : '1rem'}>
-                  Click here to see more of my architectural history.
-                </Text>
-              </Link>
+                <Link
+                  href='https://drive.google.com/file/d/11pJlX3Dka1FvYqEweYEVxvj2QYRV_Kst/view?usp=sharing'
+                  isExternal
+                  display='flex'
+                  alignItems='center'
+                  mt='5vh'
+                >
+                  <Icon as={AiFillFilePdf} w={is} h={is} />
+                </Link>
+              </MotionBox>
+              <Text mt='1vh' mb='3vh' fontSize={mobile ? '0.7rem' : '0.85rem'}>
+                click to see more of my works.
+              </Text>
             </Flex>
           )}
 
